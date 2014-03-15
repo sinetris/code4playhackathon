@@ -69,13 +69,23 @@ app.get('/status', function(req, res) {
 });
 
 app.post('/taskcompleted', function(req, res){
-
     //var task = req.body;
     console.log('task completed ');
-
-
-
 });
+
+app.get('/getuserbyname/:name', function(req, res){
+    var name = req.params.name;
+    return User.find({ nome: name }, function(err, user){
+        res.send(user);
+    });
+});
+
+
+
+
+
+
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
@@ -86,7 +96,6 @@ http.createServer(app).listen(app.get('port'), function(){
 
 
 // server - mongodb
-
 
 var userSchema = mongoose.Schema({
     tipo: String,
