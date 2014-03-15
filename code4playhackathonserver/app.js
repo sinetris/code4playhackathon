@@ -40,14 +40,20 @@ app.get('/', function(req, res){
 });
 
 app.get('/parent', function(req, res){
+	var name = req.query.name;
 	res.render('parent', {
-            title: 'Benvenuto Genitore'
+            title: 'Benvenuto ' + name, 
+			subTitle: 'Questa è la tua pagina per gestire i desideri del tuo bambino', 
+			name: name
         });
 });
 
 app.get('/child', function(req, res){
+	var name = req.query.name;
 	res.render('child', {
-            title: 'Benvenuto Figlio'
+            title: 'Benvenuto ' + name, 
+			subTitle: 'Questa è la tua pagina per gestire i tuoi desideri',
+			name: name
         });
 });
 //[tresor] end page routes
