@@ -32,6 +32,26 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+//[tresor] begin page routes
+app.get('/', function(req, res){
+	res.render('index', {
+            title: 'GrowUp'
+        });
+});
+
+app.get('/parent', function(req, res){
+	res.render('parent', {
+            title: 'Benvenuto Genitore'
+        });
+});
+
+app.get('/child', function(req, res){
+	res.render('child', {
+            title: 'Benvenuto Figlio'
+        });
+});
+//[tresor] end page routes
+
 app.get('/', routes.index);
 app.get('/users', user.list);
 
