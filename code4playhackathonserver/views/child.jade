@@ -1,5 +1,25 @@
 extends layout
 
 block content
-  h1= title
-  h4= subTitle 
+	h1= title
+	h4= subTitle 
+	div.divBodyForm
+		div.divHeader
+			div.divFoto
+				img.imgProfile(src="images/profile.jpg")
+			div.divAttribute
+				div.spanAttribute Livello
+				div.spanAttributeValue 3
+				div.spanAttribute Punti totali
+				div.spanAttributeValue 100
+				div.spanAttribute Punti a disposizione
+				div.spanAttributeValue 50
+			br
+			div.clear
+			div.divWishList
+				div.spanAttribute Livello
+				textarea.txtWishList(id="txtwishList", name="txtwishList") 
+			br
+			input(type="submit", value="See All", id="btnSeeAll", data-bind="click: seeAll")
+			br
+			input(type="submit", value="Add a wish", id="btnAdd", data-bind="click: openAdd")

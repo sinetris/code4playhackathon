@@ -40,3 +40,48 @@ a {
 {
 	text-align: center;
 }
+
+.imgProfile
+{
+	width:90px;
+	height:90px;
+}
+.divFoto
+{
+	float:left;
+}
+.divAttribute{
+float: left;
+padding-left: 5%;
+text-align: center;
+}
+
+.spanAttribute
+{
+	border:0px solid silver;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.spanAttributeValue
+{
+	border:1px solid silver;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom:10px;
+}
+.clear
+{
+	clear:both;
+}
+.txtWishList
+{
+	width: 600px;
+	height: 200px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	overflow:auto;
+}
