@@ -1,6 +1,7 @@
 extends layout
 
 block content
+	script(src='/javascripts/index.js')
 	h1.h1Title= title
 	p.pWelcome Benvenuto in #{title}, effettua il login per accedere al servizio
   
@@ -9,13 +10,15 @@ block content
 		div.divLoginUp
 			span.lblLogin Nome Utente
 			br
-			input.txtLogin(type="text", id="txtName", name="txtname")
-
+			input.txtLogin(type="text", id="txtName", name="txtname", data-bind="value: NomeUtente")
+		br
 		div.divLoginDown
-			select.selectLogin(id="ddlRuolo",name="ddlRuolo") 
+			span.lblLogin Ruolo
+			br
+			select.selectLogin(id="ddlRuolo",name="ddlRuolo", data-bind="value: Ruolo") 
 				option(value="-1") Seleziona il ruolo
 				option(value="Genitore") Genitore
 				option(value="Figlio") Figlio
-		
+		br
 		div.divSubmit
-			input.Login(type="submit", value="Login", id="btnLogin")
+			input.Login(type="submit", value="Login", id="btnLogin", data-bind="click: DoLogin")
