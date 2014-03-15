@@ -88,10 +88,38 @@ http.createServer(app).listen(app.get('port'), function(){
 // server - mongodb
 
 
-var kittySchema = mongoose.Schema({
-    name: String
+var userSchema = mongoose.Schema({
+    tipo: String,
+    nome: String,
+    email: String,
+    puntiTot : Number,
+    pSpesi : Number,
+    livello : Number,
+    badge : [{ body: String, date: Date }],
+    desideri : [{ body: String, date: Date }]
+})
+
+var User = mongoose.model('User', userSchema);
+
+var parent = new User({
+    tipo: "g",
+    nome: "luca",
+    email: "luca@gmail.com"
+})
+
+var child = new User({
+    tipo: "b",
+    nome: "bambino",
+    email: "bambino@gmail.com",
+    puntiTot : 0,
+    pSpesi :0,
+    livello : 1,
+    badge : [],
+    desideri : []
 })
 
 
+parent.save();
+child.save();
 
 
