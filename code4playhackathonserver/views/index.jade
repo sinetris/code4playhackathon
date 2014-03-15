@@ -2,23 +2,22 @@ extends layout
 
 block content
 	script(src='/javascripts/index.js')
-	h1.h1Title= title
-	p.pWelcome Benvenuto in #{title}, effettua il login per accedere al servizio
-  
-  
-	div.divBodyLogin  
-		div.divLoginUp
-			span.lblLogin Nome Utente
-			br
-			input.txtLogin(type="text", id="txtName", name="txtname", data-bind="value: NomeUtente")
-		br
-		div.divLoginDown
-			span.lblLogin Ruolo
-			br
-			select.selectLogin(id="ddlRuolo",name="ddlRuolo", data-bind="value: Ruolo") 
-				option(value="-1") Seleziona il ruolo
-				option(value="Genitore") Genitore
-				option(value="Figlio") Figlio
-		br
-		div.divSubmit
-			input.Login(type="submit", value="Login", id="btnLogin", data-bind="click: DoLogin")
+
+	div.container
+		div.jumbotron
+			h1.h1Title= title
+			p.pWelcome Benvenuto in #{title}, effettua il login per accedere al servizio
+			form.form-horizontal
+				div.form-group
+					label.col-sm-2.control-label Nome Utente
+					div.col-sm-10
+						input.form-control(type="text", id="txtName", name="txtname", data-bind="value: NomeUtente")
+				div.form-group
+					label.col-sm-2.control-label Ruolo
+					div.col-sm-10
+						select.form-control(id="ddlRuolo",name="ddlRuolo", data-bind="value: Ruolo")
+							option(value="-1") Seleziona il ruolo
+							option(value="Genitore") Genitore
+							option(value="Figlio") Figlio
+				div.form-group
+					input.btn.btn-lg.btn-block.btn-primary(type="submit", value="Login", id="btnLogin", data-bind="click: DoLogin")
