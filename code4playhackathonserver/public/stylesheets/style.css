@@ -1,8 +1,42 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Ubuntu', sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.divBodyLogin
+{
+	position: absolute;
+	left: 50%;
+	text-align: center;
+	margin-left:-4%;
+}
+.txtLogin {
+	width:170px;
+}
+.selectLogin
+{
+	width:170px;
+}
+
+.lblLogin
+{
+	font-size: 20px
+
+}
+
+.h1Title
+{
+	text-align: center;
+}
+
+
+.pWelcome
+{
+	text-align: center;
 }

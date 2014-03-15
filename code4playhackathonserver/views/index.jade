@@ -1,5 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	h1.h1Title= title
+	p.pWelcome Benvenuto in #{title}, effettua il login per accedere al servizio
+  
+  
+	div.divBodyLogin  
+		div.divLoginUp
+			span.lblLogin Nome Utente
+			br
+			input.txtLogin(type="text", id="txtName", name="txtname")
+
+		div.divLoginDown
+			select.selectLogin(id="ddlRuolo",name="ddlRuolo") 
+				option(value="-1") Seleziona il ruolo
+				option(value="Genitore") Genitore
+				option(value="Figlio") Figlio
+		
+		div.divSubmit
+			input.Login(type="submit", value="Login", id="btnLogin")
